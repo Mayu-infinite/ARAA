@@ -1,16 +1,21 @@
 # ARAA — Autonomous Research Assistant AI
 
-ARAA is an **agentic AI project** designed to help automate research tasks. It can **plan goals**, **break them into subtasks**, and **search and summarize information** autonomously using the **LLaMA 3 model** via **Ollama** and **LangChain**.
+ARAA (Autonomous Research Assistant AI) is an **advanced agentic AI project** designed to automate complex research workflows. It leverages **LLM-based agents** to plan research goals, break them into actionable subtasks, perform autonomous searches, and summarize information efficiently. It mimics human decision-making and self-directed behavior, enabling researchers to focus on strategic work.
+
+ARAA is built using the **LLaMA 3 model** via **Ollama**, integrated with **LangChain** for agent orchestration and task execution.
 
 ---
 
 ## Features
 
-* **Goal Planning:** Breaks research goals into clear, numbered subtasks.
-* **Autonomous Search:** Uses DuckDuckGo search to find relevant information.
-* **Summarization:** Summarizes search results into concise bullet points.
-* **Agentic Workflow:** Mimics human-like decision making in completing research tasks.
-* **Extensible:** Easily add new agents or tools.
+| Feature                    | Description                                                                             |
+| -------------------------- | --------------------------------------------------------------------------------------- |
+| Goal Planning              | Breaks high-level research goals into sequential, prioritized tasks using Planner Agent |
+| Autonomous Search          | Searches the web autonomously using DuckDuckGo and keyword expansion via Searcher Agent |
+| Summarization              | Summarizes results into concise bullet points, pros/cons, or key insights               |
+| Agentic Workflow           | Simulates human decision-making to select and execute tasks effectively                 |
+| Extensible                 | Modular design allows integration of new agents or tools                                |
+| Frontend Integration Ready | Supports easy integration with a React-based frontend for interactive dashboards        |
 
 ---
 
@@ -19,10 +24,11 @@ ARAA is an **agentic AI project** designed to help automate research tasks. It c
 ```
 ARAA/
 ├── venv/                     # Python virtual environment
-├── agents/                   # Individual AI agents
-│   ├── planner_agent.py      # Plans research goals
-│   └── searcher_agent.py     # Searches and summarizes information
-├── main.py                   # Main program to run ARAA
+├── agents/                   # AI agent modules
+│   ├── planner_agent.py      # Plans research goals and creates task sequences
+│   └── searcher_agent.py     # Performs automated searches and summarizes information
+├── main.py                   # Main entry point for running ARAA
+├── requirements.txt          # Python dependencies
 └── .gitignore
 ```
 
@@ -30,36 +36,36 @@ ARAA/
 
 ## Setup Instructions
 
-### 1️⃣ Clone the repository
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/Mayu-infinite/ARAA.git
 cd ARAA
 ```
 
-### 2️⃣ Create and activate Python virtual environment
+### 2️⃣ Create and Activate Python Virtual Environment
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3️⃣ Install required packages
+### 3️⃣ Install Required Python Packages
 
 ```bash
 pip install --upgrade pip
 pip install langchain langchain-ollama langchain-community duckduckgo-search openai pandas numpy
 ```
 
-Optional for image processing:
+Optional for image processing or advanced tasks:
 
 ```bash
 pip install opencv-python pillow scikit-learn
 ```
 
-### 4️⃣ Start Ollama server
+### 4️⃣ Start Ollama Server
 
-In a new terminal:
+In a separate terminal:
 
 ```bash
 ollama serve
@@ -73,51 +79,81 @@ Listening on 127.0.0.1:11434
 
 ### 5️⃣ Run ARAA
 
-With venv active:
+With the virtual environment active:
 
 ```bash
 python main.py
 ```
 
----
-
-## Usage
+### 6️⃣ Interacting with ARAA
 
 1. Enter your **research goal** when prompted.
-2. ARAA will output a **numbered task plan**.
-3. Choose a task number to execute → ARAA will **search and summarize** the task.
-4. View the summarized output.
+2. ARAA generates a **numbered task plan** with subtasks.
+3. Select the task number to execute; ARAA performs **search, summarization, and outputs results**.
+4. Repeat for subsequent tasks to progress toward the overall research goal.
+
+---
+
+## Example Usage
+
+| Input                                                  | Description                         | Output                                              |
+| ------------------------------------------------------ | ----------------------------------- | --------------------------------------------------- |
+| "Build a research plan for AI-based autonomous drones" | User provides overall research goal | Numbered subtask plan                               |
+| Select task 2                                          | Execute a subtask                   | Summarized search results with links and key points |
 
 ---
 
 ## GitHub Setup
 
-* Your project is ready to push:
+To version control your project and push updates:
 
 ```bash
 git add .
-git commit -m "Initial commit: ARAA setup with planner & searcher agents"
+git commit -m "Initial commit: Complete ARAA setup with planner & searcher agents"
 git push -u origin main
 ```
 
 ---
 
-## Future Work / Enhancements
+## Future Enhancements
 
-* Add **more agent types** (e.g., data analysis, visualization)
-* Add **React frontend** for a user-friendly interface
-* Integrate **PDF or web scraping tools**
-* Improve **task prioritization and chaining** in agentic workflow
+| Enhancement                 | Description                                                             |
+| --------------------------- | ----------------------------------------------------------------------- |
+| Additional Agents           | Data analysis, visualization, scraping agents can be added              |
+| Frontend Dashboard          | React frontend for interactive task visualization and summaries         |
+| Web Scraping & PDF Analysis | Automate extraction from academic papers, reports, and online resources |
+| Enhanced Agentic Reasoning  | Implement task prioritization and chaining for better decision-making   |
+| Multi-User Support          | Collaborative research environment with multiple users and profiles     |
+
+---
+
+## System Requirements
+
+* **OS:** Linux (Fedora recommended) or macOS/Windows
+* **Python:** >=3.11
+* **RAM:** At least 8GB
+* **Ollama:** Installed and running
+* **Internet:** Required for autonomous search and updates
 
 ---
 
 ## Author
 
-**Mayu-infinite**
-IIT Jodhpur, India
-
+**Mayuri Pujari**
+**Prasangeet Dongre**
 ---
 
 ## License
 
 This project is open-source under the **MIT License**.
+
+---
+
+## Contact & Support
+
+* GitHub Issues: [https://github.com/Mayu-infinite/ARAA/issues](https://github.com/Mayu-infinite/ARAA/issues)
+* Email for collaboration and questions: (your GitHub email)
+
+---
+
+This README provides a **professional, comprehensive overview** of ARAA, including **features, setup, usage, examples, future plans, and contact info** for a GitHub-ready project page.
