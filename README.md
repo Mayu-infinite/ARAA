@@ -139,8 +139,7 @@ git push -u origin main
 
 ## Author
 
-**Mayuri Pujari**
-**Prasangeet Dongre**
+**Mayuri and Prasangeet**
 ---
 
 ## License
