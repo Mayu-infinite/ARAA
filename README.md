@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ARAA — Autonomous Research Assistant AI
 
 ARAA (Autonomous Research Assistant AI) is an **advanced agentic AI project** designed to automate complex research workflows. It leverages **LLM-based agents** to plan research goals, break them into actionable subtasks, perform autonomous searches, and summarize information efficiently. It mimics human decision-making and self-directed behavior, enabling researchers to focus on strategic work.
@@ -156,3 +157,8 @@ This project is open-source under the **MIT License**.
 ---
 
 This README provides a **professional, comprehensive overview** of ARAA, including **features, setup, usage, examples, future plans, and contact info** for a GitHub-ready project page.
+=======
+# ARAA - Autonoumous Reasearch and Action Agent
+
+**ARAA** is an agentic AI system designed to think, plan, and act autonomously — similar in spirit to Gemini or GPT-based agent frameworks — but built entirely using free, open-source tools like LangChain, local LLMs (via Ollama/llama.cpp), and ChromaDB for vector memory.
+>>>>>>> 2994e7a (updated project)
