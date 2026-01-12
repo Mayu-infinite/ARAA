@@ -31,5 +31,9 @@ class AgentLoop:
             decision = self.reasoner.run(state)
             if decision == "STOP":
                 state.done = True
+            elif decision == "REPLAN":
+                new_tasks = self.planner.run(state)
+                for task in new_tasks:
+                    state.add_task(task)
 
         return state
