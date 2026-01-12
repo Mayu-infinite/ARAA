@@ -10,7 +10,10 @@ class PlannerAgent(Agent):
         prompt = self._build_prompt(state.goal)
         response = self.llm.generate(prompt)
 
+        ## print the response
+
         tasks = self._parse_tasks(response)
+        ## Print tasks
 
         if not tasks:
             return [
